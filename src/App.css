@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'pokemon_solidnormal';
+    src: url('/assets/fonts/pokemon_solid-webfont.woff2') format('woff2'),
+         url('/assets/fonts/pokemon_solid-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=B612:wght@700&display=swap');
+* {
+    font-family: 'B612', sans-serif;
+}
+body {
+    overflow-x: hidden;
+    background: #fff5b3;
+}
+.container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.container.full {
+    grid-template-columns: repeat(1, 1fr);
+    height: 90vh;
+}
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 0.7rem;
+    color:rgb(106, 163, 137);
+    font-weight: 700;
+}
+
+@media (max-width: 1194px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+  
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+  
+@media (max-width: 1024px) and (orientation: portrait) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+  

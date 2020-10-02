@@ -1,0 +1,191 @@
+.card {
+    box-shadow: 0 2.5em 0.9em -2em #999;
+    border-radius: 5px;
+    position: relative;
+    height: 200px;
+    margin: 15px 10px 15px;
+    background-color: #FFDE00;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    transition: all .4s ease-in-out;
+}
+.card:hover {
+    transform: scale(1.04);
+    background-color: white;
+}
+.card.full {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    height: auto;
+}
+.card.full:hover {
+    transform: scale(1);
+    background-color: #FFDE00;
+}
+.card.hide {
+    display: none;
+}
+.pokemon {
+    display: grid;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: relative;
+    padding: 23px 20px 10px;
+    grid-column: 1 / span 4;
+    grid-template-rows: 2fr 1fr;
+}
+.pokemon img {
+    animation: scale 5s steps(300, end) infinite;
+    max-height: 110px;
+    grid-column: 2 / span 1;
+}
+.pokemon img:hover {
+    animation: glitch 2.5s infinite;
+}
+.square_btn {
+    padding: 13px 20px;
+    text-decoration: none;
+    background: #008DFA;
+    color: #8bcbfc;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2);
+    border-bottom: solid 2px #004F8B;
+    border-radius: 5px;
+    font-weight: bold;
+    text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38);
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+.pokemon .square_btn {
+    font-size: 0.9em;
+    background: #fe3d00;
+    padding: 5px 9px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: white;
+    letter-spacing: 0px;
+    border-bottom: 0;
+    text-shadow: 0 0 0;
+    font-weight: normal;
+}
+.square_btn:active {
+    border-bottom: solid 2px #0E94FB;
+    box-shadow: none;
+    text-shadow: -1px -1px rgba(255, 255, 255, 0.3), 1px 1px rgba(0, 0, 0, 0.3);
+}
+.pokemon .square_btn:active {
+    border-bottom: 0;
+}
+h3 {
+    font-size: 1.4em;
+    position: absolute;
+    bottom: 15px;
+    text-transform: capitalize;
+    margin: 0;
+    color: black;
+}
+
+@media (max-width: 1440px) {
+    .square_btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    h3 {
+        font-size: 1.1em;
+    }
+    .pokemon .square_btn {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 1024px) {
+    .card {
+        margin: 15px 10px 5px;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    .card {
+        margin: 15px 10px 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pokemon .square_btn {
+        font-size: 0.7em;
+        bottom: 12px;
+    }
+    h3 {
+        font-size: 0.9em;
+    }
+}
+
+@keyframes glitch {
+    0% {
+        transform: none;
+        opacity: 1;
+    }
+    7% {
+        transform: skew(-0.5deg, -0.9deg);
+        opacity: 0.75;
+    }
+    10% {
+        transform: none;
+        opacity: 1;
+    }
+    27% {
+        transform: none;
+        opacity: 1;
+    }
+    30% {
+        transform: skew(0.8deg, -0.1deg);
+        opacity: 0.75;
+    }
+    35% {
+        transform: none;
+        opacity: 1;
+    }
+    52% {
+        transform: none;
+        opacity: 1;
+    }
+    55% {
+        transform: skew(-1deg, 0.2deg);
+        opacity: 0.75;
+    }
+    50% {
+        transform: none;
+        opacity: 1;
+    }
+    72% {
+        transform: none;
+        opacity: 1;
+    }
+    75% {
+        transform: skew(0.4deg, 1deg);
+        opacity: 0.75;
+    }
+    80% {
+        transform: none;
+        opacity: 1;
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    33% {
+        transform: scale(1.1)
+    }
+    66% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }  
+}

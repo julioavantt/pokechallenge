@@ -1,0 +1,69 @@
+h4 {
+    font-size: 1.3em;
+    margin: 5px 0 0;
+    text-align: left;
+}
+ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    text-align: left;
+    padding-left: 0;
+    background: #fe3d00;
+    border-radius: 4px;
+    padding: 10px 10px 15px;
+    color: white;
+    margin: 0;
+}
+ul li {
+    list-style: none;
+    font-size: .9em;
+}
+ul li:hover {
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 4s infinite;
+}
+
+@media (max-width: 1440px) {
+    h4 {
+        font-size: 1.3em;
+    }
+    ul li {
+        font-size: .9em;
+    }
+}
+   
+@media (max-width: 1024px) {
+    ul {
+        margin-bottom: 5px;
+    }
+}
+  
+@media (max-width: 1024px) and (orientation: portrait) {
+    ul {
+        margin-bottom: 5px;
+    }
+}
+  
+@media (max-width: 767px) and (orientation: portrait) {
+    ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@-webkit-keyframes shine {
+    from {
+       -webkit-mask-position: 150%;
+    }
+    
+    to {
+       -webkit-mask-position: -50%;
+    }
+}
